@@ -2,7 +2,7 @@
 
 Este repositório contém **três experimentos práticos com Docker**, explicando **o que aprendi, o que cada pasta contém e o que cada Dockerfile/Compose faz.**
 
-Aprendi a base na Pós Graduação Full Stack Development da **Fiap**.
+Aprendi a base na **Pós Graduação Full Stack Development da Fiap**.
 
 ---
 
