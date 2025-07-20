@@ -1,6 +1,14 @@
 FROM node:18-slim
 # uma imagem mais leve
 
+# ENV NODE_ENV=production
+# em qualquer lugar que essa variável estiver setada, ela retorna production, não pode ser exposta por motivos de segurança, por isso criamos como argumento
+
+AGR NODE_ENV_ARG
+
+ENV NODE_ENV=$NODE_ENV_ARG
+# agora está certo, pois não retorna nenhum valor sensível
+
 WORKDIR /app
 
 COPY package.json .
