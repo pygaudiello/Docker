@@ -1,0 +1,34 @@
+version: '3.9' 
+# Se não colocar vai pegar a mais recente, você pode ver a versão pesquisando no Google "Docker Compose Version"
+
+volumes:
+  mysql_data: {}
+
+services:
+  mysql:
+    image: mysql:8.0
+    # Se quiser usar outra versão, pesquisa no Google "Docker Hub", pesquisa no search "mysql", clica no primeiro resultado que aparece
+    # clica em "tags" e ai aparece as imagens existentes
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always 
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  wordpress:
+    depends_on:
+      - mysql
+    image: wordpress:latest
+    ports: 
+      - "80:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - ./wordpress:/var/www/html
+      
