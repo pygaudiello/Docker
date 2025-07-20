@@ -1,35 +1,15 @@
-FROM node:18
+FROM node:18-slim
 
 WORKDIR /app
 
-COPY package.json . 
+COPY package.json .
 
-RUN npm install 
+RUN npm install
+
+RUN apt-get update && apt-get install -y nano
+
+COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "app.js"]
-
-
-
-
-
-
-
-
-
-# FROM node:18-slim
-
-# WORKDIR /app
-
-# COPY package.json .
-
-# RUN npm install
-
-# RUN apt-get update && apt-get install -y nano
-
-# COPY . .
-
-# EXPOSE 3000
-
-# CMD [ "node", "app.js" ]
+CMD [ "node", "app.js" ]
