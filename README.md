@@ -55,7 +55,6 @@ Aprendi a base na **Pós Graduação Full Stack Development da Fiap**.
 - Criação e persistência de dados em volumes.
 - Configuração de variáveis de ambiente em serviços.
 - Estrutura de `version`, `services` e `volumes` no Compose.
-
 ---
 
 ## 🚀 Resultados
@@ -66,5 +65,11 @@ Aprendi a base na **Pós Graduação Full Stack Development da Fiap**.
 - Comparação entre imagens otimizadas (`slim`) e completas.
 - Uso do Docker Compose para subir ambientes de forma prática.
 - Criação de ambientes isolados e reproduzíveis para estudo e desenvolvimento.
+
+✅ Na Pasta `app-docker-compose`, quando entramos no Localhost:80 entramos no Wordpress:
+
+<img width="1906" height="1000" alt="image" src="https://github.com/user-attachments/assets/25f77bdb-c237-46ba-ad08-9e9b20603a99" />
+<img width="1914" height="996" alt="image" src="https://github.com/user-attachments/assets/27353067-161e-4cbf-a943-d93a3c072e1a" />
+
 
 
